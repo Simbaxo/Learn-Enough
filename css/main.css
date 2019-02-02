@@ -6,7 +6,16 @@
  }
 
  body {
+   display: flex;
+   flex-direction: column;
    font-family: helvetica, arial, sans;
+   min-height: 100vh;
+ }
+
+ .content-container {
+   flex: 1 1 auto;
+   padding-top: 10vh;
+   width: 100%;
  }
 
  h1 {
@@ -24,6 +33,7 @@ a {
 
 p {
   line-height: 1.5;
+  margin: 0.75em 0;
 }
 
 h2 ~ p {
@@ -142,8 +152,7 @@ h2 ~ p {
   background-color: #c7dbfc;
   background-size: cover;
   box-sizing: border-box;
-  height: 100vh;
-  padding-top: 10vh;
+  height: 90vh;
 }
 
 .full-hero:after {
@@ -239,19 +248,29 @@ h2 ~ p {
 }
 
 .home-callout {
+  display: flex;
+  align-items: center;
   background-color: #000;
   color: #fff;
   padding: 7vh 0;
 }
 
+.home-callout h3 {
+  color: inherit;
+  margin-top: 1em;
+}
+
 .callout-title {
+  flex: 1;
   font-size: 5.75vw;
   text-align: right;
   text-transform: uppercase;
 }
 
 .callout-copy {
+  flex: 0 0 45em;
   font-size: 0.8rem;
+  padding: 0.3vw;
 }
 
 /* BIO STYLES */
